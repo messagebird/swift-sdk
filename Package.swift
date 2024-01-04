@@ -18,7 +18,7 @@ let package = Package(
             // Until this repo goes public, you can use a local path instead.
             // Remove the `url` and `checksum` lines and uncomment the `path` line.
             // path: "../path/to/BirdKit.xcframework.zip"
-            url: "https://github.com/messagebird/swift-sdk/releases/download/0.0.0/BirdKit.xcframework.zip",
+            url: "https://github.com/messagebird/swift-sdk/releases/download/0.0.1/BirdKit.xcframework.zip",
             checksum: ""
         ),
     ]
