@@ -19,7 +19,7 @@ let package = Package(
             // Remove the `url` and `checksum` lines and uncomment the `path` line.
             // path: "../path/to/BirdKit.xcframework.zip"
             url: "https://github.com/messagebird/swift-sdk/releases/download/0.0.1/BirdKit.xcframework.zip",
-            checksum: ""
+            checksum: "7d56f5906726954495d46ae1971eb16c9fa2908c52be630fbea268e651581099"
         ),
     ]
 )
