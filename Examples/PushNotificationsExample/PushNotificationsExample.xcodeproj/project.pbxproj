@@ -15,6 +15,7 @@
 		1A8CCDB52B28A1AA003DEE5E /* BirdKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1A8CCDB42B28A1AA003DEE5E /* BirdKit */; };
 		1A99B7182B46E341001581E4 /* BirdKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1A99B7172B46E341001581E4 /* BirdKit */; };
 		1A99B71B2B46E413001581E4 /* BirdKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1A99B71A2B46E413001581E4 /* BirdKit */; };
+		1A99B7202B4C0944001581E4 /* BirdKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1A99B71F2B4C0944001581E4 /* BirdKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,8 @@
 		1A8CCDA72B28A18E003DEE5E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1A8CCDA92B28A18F003DEE5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A8CCDAC2B28A18F003DEE5E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1A99B7722B4C30FC001581E4 /* PushNotificationsExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PushNotificationsExample.entitlements; sourceTree = "<group>"; };
+		1A99B7732B4C3102001581E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A99B7202B4C0944001581E4 /* BirdKit in Frameworks */,
 				1A99B71B2B46E413001581E4 /* BirdKit in Frameworks */,
 				1A99B7182B46E341001581E4 /* BirdKit in Frameworks */,
 				1A8CCDB52B28A1AA003DEE5E /* BirdKit in Frameworks */,
@@ -59,6 +63,8 @@
 		1A8CCDA42B28A18E003DEE5E /* PushNotificationsExample */ = {
 			isa = PBXGroup;
 			children = (
+				1A99B7732B4C3102001581E4 /* Info.plist */,
+				1A99B7722B4C30FC001581E4 /* PushNotificationsExample.entitlements */,
 				1A8CCDA52B28A18E003DEE5E /* PushNotificationsExampleApp.swift */,
 				1A8CCDA72B28A18E003DEE5E /* ContentView.swift */,
 				1A2D6E892B29AC540036046E /* AppDelegate.swift */,
@@ -96,6 +102,7 @@
 				1A8CCDB42B28A1AA003DEE5E /* BirdKit */,
 				1A99B7172B46E341001581E4 /* BirdKit */,
 				1A99B71A2B46E413001581E4 /* BirdKit */,
+				1A99B71F2B4C0944001581E4 /* BirdKit */,
 			);
 			productName = PushNotificationsExample;
 			productReference = 1A8CCDA22B28A18E003DEE5E /* PushNotificationsExample.app */;
@@ -126,7 +133,7 @@
 			);
 			mainGroup = 1A8CCD992B28A18E003DEE5E;
 			packageReferences = (
-				1A99B7192B46E413001581E4 /* XCLocalSwiftPackageReference "../.." */,
+				1A99B71E2B4C0944001581E4 /* XCLocalSwiftPackageReference "../.." */,
 			);
 			productRefGroup = 1A8CCDA32B28A18E003DEE5E /* Products */;
 			projectDirPath = "";
@@ -287,12 +294,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PushNotificationsExample/PushNotificationsExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PushNotificationsExample/Preview Content\"";
 				DEVELOPMENT_TEAM = 2B3Z826SDA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PushNotificationsExample/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -317,12 +326,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PushNotificationsExample/PushNotificationsExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PushNotificationsExample/Preview Content\"";
 				DEVELOPMENT_TEAM = 2B3Z826SDA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PushNotificationsExample/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -366,7 +377,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		1A99B7192B46E413001581E4 /* XCLocalSwiftPackageReference "../.." */ = {
+		1A99B71E2B4C0944001581E4 /* XCLocalSwiftPackageReference "../.." */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../..;
 		};
@@ -382,6 +393,10 @@
 			productName = BirdKit;
 		};
 		1A99B71A2B46E413001581E4 /* BirdKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = BirdKit;
+		};
+		1A99B71F2B4C0944001581E4 /* BirdKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = BirdKit;
 		};
