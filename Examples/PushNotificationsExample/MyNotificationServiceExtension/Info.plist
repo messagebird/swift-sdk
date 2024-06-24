@@ -10,6 +10,8 @@
 		<string>group.com.bird.example.pushnotifications</string>
 		<key>AccessGroup</key>
 		<string>$(AppIdentifierPrefix)com.bird.example.pushnotifications</string>
+		<key>LogLevel</key>
+		<string>none</string>
 	</dict>
 	<key>NSExtension</key>
 	<dict>

@@ -4,14 +4,14 @@
 <dict>
 	<key>Bird</key>
 	<dict>
-		<key>LogLevel</key>
-		<string>info</string>
 		<key>ApplicationKey</key>
 		<string>YOUR_APPLICATION_KEY</string>
 		<key>AppGroup</key>
 		<string>group.com.bird.example.pushnotifications</string>
 		<key>AccessGroup</key>
 		<string>$(AppIdentifierPrefix)com.bird.example.pushnotifications</string>
+		<key>LogLevel</key>
+		<string>none</string>
 	</dict>
 	<key>UIBackgroundModes</key>
 	<array>
