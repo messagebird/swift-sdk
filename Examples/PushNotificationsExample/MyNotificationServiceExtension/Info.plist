@@ -4,16 +4,17 @@
 <dict>
 	<key>Bird</key>
 	<dict>
-		<key>LogLevel</key>
-		<string>info</string>
 		<key>ApplicationKey</key>
 		<string>YOUR_APPLICATION_KEY</string>
 		<key>AppGroup</key>
 		<string>group.com.bird.example.pushnotifications</string>
 	</dict>
-	<key>UIBackgroundModes</key>
-	<array>
-		<string>remote-notification</string>
-	</array>
+	<key>NSExtension</key>
+	<dict>
+		<key>NSExtensionPointIdentifier</key>
+		<string>com.apple.usernotifications.service</string>
+		<key>NSExtensionPrincipalClass</key>
+		<string>$(PRODUCT_MODULE_NAME).NotificationService</string>
+	</dict>
 </dict>
 </plist>
