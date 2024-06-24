@@ -8,5 +8,9 @@
 	<array>
 		<string>group.com.bird.example.pushnotificaitons</string>
 	</array>
+	<key>keychain-access-groups</key>
+	<array>
+		<string>$(AppIdentifierPrefix)com.bird.example.pushnotifications</string>
+	</array>
 </dict>
 </plist>

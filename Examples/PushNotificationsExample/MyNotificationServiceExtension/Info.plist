@@ -8,6 +8,8 @@
 		<string>YOUR_APPLICATION_KEY</string>
 		<key>AppGroup</key>
 		<string>group.com.bird.example.pushnotifications</string>
+		<key>AccessGroup</key>
+		<string>$(AppIdentifierPrefix)com.bird.example.pushnotifications</string>
 	</dict>
 	<key>NSExtension</key>
 	<dict>

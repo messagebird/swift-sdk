@@ -6,10 +6,10 @@ import PackageDescription
 let package = Package(
     name: "swift-sdk",
     platforms: [
-        .iOS(.v14),
+        .iOS(.v14)
     ],
     products: [
-        .library(name: "BirdKit", targets: ["BirdKit"]),
+        .library(name: "BirdKit", targets: ["BirdKit"])
     ],
     targets: [
         .binaryTarget(
@@ -22,6 +22,6 @@ let package = Package(
 
             url: "https://github.com/messagebird/swift-sdk/releases/download/0.0.1/BirdKit.xcframework.zip",
             checksum: "48b30d1d4e30a8c5a36c90f690eef799742ab48672676bdc7515dd217d65a5ff"
-        ),
+        )
     ]
 )
