@@ -13,7 +13,7 @@ import BirdKit
 
 class AppDelegate: NSObject, UIApplicationDelegate {
     
-    static var bird: Bird? = nil
+    static var bird: Bird!
     static let logger = Logger(subsystem: Bundle.main.bundleIdentifier!, category: "AppDelegate")
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
@@ -45,7 +45,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         _ application: UIApplication,
         didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data
     ) {
-        Self.bird?.notifications.registerDevice(deviceToken: deviceToken)
+        Self.bird.notifications.registerDevice(deviceToken: deviceToken)
         
         Self.logger.log("APNS token: \(deviceToken.map { String(format: "%02x", $0) }.joined())")
     }
@@ -60,7 +60,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         didReceiveRemoteNotification userInfo: [AnyHashable: Any],
         fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void
     ) {
-        Self.bird?.notifications.applicationDidReceiveRemoteNotification(userInfo: userInfo, completionHandler: completionHandler)
+        Self.bird.notifications.applicationDidReceiveRemoteNotification(userInfo: userInfo, completionHandler: completionHandler)
     }
 }
 
@@ -71,8 +71,8 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void
     ) {
         Self.logger.log(#function)
-        let options = Self.bird?.notifications.willPresentNotification(notification)
-        completionHandler(options ?? [.sound, .banner, .list])
+        let options = Self.bird.notifications.willPresentNotification(notification)
+        completionHandler(options)
     }
 
     func userNotificationCenter(
@@ -81,6 +81,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         withCompletionHandler completionHandler: @escaping () -> Void
     ) {
         Self.logger.log(#function)
-        Self.bird?.notifications.didReceiveResponse(response)
+        Self.bird.notifications.didReceiveResponse(response)
+        completionHandler()
     }
 }
