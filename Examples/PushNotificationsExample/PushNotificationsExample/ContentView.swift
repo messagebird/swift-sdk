@@ -40,7 +40,7 @@ struct ContentView: View {
             }
             Text("Contact")
             Button("Put Attributes") {
-                let attributes = BirdKit.Attributes().put("displayName", "Name from iOS")
+                let attributes = BirdKit.Attributes().put("displayName", "iOS: push notifications example")
                 AppDelegate.bird?.contact.putAttributes(attributes: attributes )
             }
             
