@@ -60,7 +60,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         didReceiveRemoteNotification userInfo: [AnyHashable: Any],
         fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void
     ) {
-        Self.bird.notifications.applicationDidReceiveRemoteNotification(userInfo: userInfo, completionHandler: completionHandler)
+        Self.bird.notifications.handleBackgroundNotification(userInfo: userInfo, completionHandler: completionHandler)
     }
 }
 
@@ -81,7 +81,17 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         withCompletionHandler completionHandler: @escaping () -> Void
     ) {
         Self.logger.log(#function)
-        Self.bird.notifications.didReceiveResponse(response)
+        if let result = Self.bird.notifications.handleNotificationResponse(
+            response: response,
+            automaticallyOpenDeeplinks: false
+        ) {
+            Self.logger.log("type \(result.type.rawValue)")
+            Self.logger.log("payload \(result.payload))")
+            Self.logger.log("action.type \(result.action.type.rawValue)")
+            Self.logger.log("action.url \(result.action.url?.absoluteString ?? "")")
+            Self.logger.log("action.identifier \(result.action.identifier)")
+
+        }
         completionHandler()
     }
 }
