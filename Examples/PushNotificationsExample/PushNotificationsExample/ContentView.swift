@@ -5,8 +5,8 @@
 //  Created by Meena Alfons on 12/12/2023.
 //
 
-import SwiftUI
 import BirdKit
+import SwiftUI
 
 struct ContentView: View {
     @State var sourceUrl = ""
@@ -16,7 +16,7 @@ struct ContentView: View {
             if sourceUrl != "" {
                 Text("Opened from \(sourceUrl)")
             }
-            
+
             let signedIdentity = "change-me-with-sample-signed-identity"
             Text("Push notifications")
             Button("Ask for notifications permission") {
@@ -29,7 +29,8 @@ struct ContentView: View {
                 )
             }
             Button("Set Signed Identity") {
-                let signedIdentity = "change-me-with-sample-signed-identity"
+                let signedIdentity =
+                    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Im1ybjp2MTphcHBsaWNhdGlvbjppZGVudGl0eS1jbGFpbXMtaXNzdWVyOjAxZWNlODAxLWVmNTctNGQwNC1hZGFlLWJjN2U0YWQwOGFmZS8yZmQ5NTdlOS1jNTQwLTRhM2UtYjA5My0wZWE5NmU3NDY1ZjY6MSJ9.eyJpZGVudGlmaWVycyI6W3sia2V5IjoiZW1haWxhZGRyZXNzIiwidmFsdWUiOiJtZWVuYS50ZXN0MkBlbWFpbC5jb20ifV19.in94rLJe1X_7MejgnmV8f284Z8YPxRZcJV8LG5cTbVk"
                 AppDelegate.bird?.contact.identify(
                     signedIdentity: signedIdentity
                 )
@@ -40,10 +41,12 @@ struct ContentView: View {
             }
             Text("Contact")
             Button("Put Attributes") {
-                let attributes = BirdKit.Attributes().put("displayName", "iOS: push notifications example")
-                AppDelegate.bird?.contact.putAttributes(attributes: attributes )
+                let attributes = BirdKit.Attributes()
+                    .put("displayName", "iOS: push notifications example")
+                    .put("subscribedPush", true)
+                AppDelegate.bird?.contact.putAttributes(attributes: attributes)
             }
-            
+
         }
         .padding()
         .onOpenURL(perform: { url in
