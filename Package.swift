@@ -20,8 +20,8 @@ let package = Package(
             // In XCode -> File -> Packages -> Update to Latest Package Versions
             // path: "../path/to/BirdKit.xcframework.zip"
 
-            url: "https://github.com/messagebird/swift-sdk/releases/download/0.2.0/BirdKit.xcframework.zip",
-            checksum: "20fde468ac704fb49cc58679633fdf931144cfd4b1ff0545170808dabf46a699"
+            url: "https://github.com/messagebird/swift-sdk/releases/download/0.2.1/BirdKit.xcframework.zip",
+            checksum: "61e28bb3d4ed96ea60636d0d75c778cab8373e5e339fd26fa976a0f4cd9dc137"
         )
     ]
 )
